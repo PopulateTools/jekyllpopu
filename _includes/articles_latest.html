@@ -1,0 +1,21 @@
+{% for article in site.articles reversed %}
+  {% unless article.featured == true and page.url == '/' %}
+  <div class="story clearfix">
+    <a href="{{ article.url | prepend: site.baseurl }}">
+      {% if article.image_small %}
+        {% img '{{ article.image_small }}' %}
+      {% else %}
+        {% if article.main_photo %}
+          {% img '{{ article.main_photo }}' %}
+        {% endif %}
+      {% endif %}
+    </a>
+    <h2><a class="post-link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a></h2>
+    <p>{{ article.excerpt | strip_html }}</p>
+    <div class="post-meta">
+       <span class="post-date">{{ article.date | date: "%b %-d, %Y" }}</span> ·
+       <span class="post-author">{{ article.author }}</span>
+    </div>
+  </div>
+  {% endunless %}
+{% endfor %}

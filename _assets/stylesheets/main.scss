@@ -1,0 +1,52 @@
+@charset "utf-8"; 
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,500,600,700|PT+Serif:400,700");
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";        
+
+$color_main: #368CA5;
+$color_main_dark: #0B4C6A;
+
+$color_meta_text: #A5A5A5;
+$color_tool_bg: #EFEFEF;
+$color_tool_text: #848484;
+$color_separator: #E2E1DA;
+$color_boxes: #F3F3EA;
+$color_dark_bg: #D2D6D2;
+
+$color_text_light: #3A362D;
+$color_facebook: #3A589A;
+$color_twitter: #00ABEF;
+$color_link: #276D97;
+$color_headers: #444;
+
+$font_body: 'Source Sans Pro';
+$font_headings: 'PT Serif';
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+  "_vendor/pure-min",
+  "_vendor/pure-grids-responsive-min",
+  "_vendor/populities",
+  "_vendor/magnific-popup",
+  "_vendor/bourbon/bourbon",
+  "_vendor/tipsy",
+  "_vendor/select-and-tweet",
+  
+  "progress_bar",
+  "style",
+  "home",
+  "responsive"
+  
+;
+
+body {
+  font-size: 16px;
+  font-family: $font_body, Arial;
+}
+
+html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
+  font-family: $font_body, Arial;
+}
+
+
+

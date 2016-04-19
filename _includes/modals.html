@@ -1,0 +1,79 @@
+
+<div class="modal mfp-hide" id="worth_sharing_modal" data-share>
+
+  <h2>Help spread the word</h2>
+  <p class="sub">Share this story with your network</p>
+
+  <p class="">
+    <a href="#" class="social_share twitter popup" data-share-network="twitter" data-track-event="Social Share|Click Twitter|From Article Footer"><i class="fa fa-twitter"></i> Tweet</a>
+    <a href="#" class="social_share facebook popup" data-share-network="facebook" data-track-event="Social Share|Click Facebook|From Article Footer"><i class="fa fa-facebook"></i> Facebook</a>
+    <a href="#" class="social_share linkedin popup" data-share-network="linkedin" data-track-event="Social Share|Click Linkedin|From Article Footer"><i class="fa fa-linkedin"></i> Linkedin</a>
+    <a href="#" class="social_share email" data-share-network="email" data-track-event="Social Share|Click Email|From Article Footer"><i class="fa fa-envelope"></i> Email</a>
+  </p>
+
+</div>
+
+<div class="scroll_box tweet_box" data-share>
+
+  <div class="tweet_to_show" data-share-text>
+  </div>
+
+  <a href="#" class="social_share twitter" data-share-network="twitter" data-track-event="Social Share|Click Twitter|From Article OnScroll"><i class="fa fa-twitter"></i> Tweet</a>
+  <a href="#" class="social_share facebook" data-share-network="facebook" data-track-event="Social Share|Click Facebook|From Article OnScroll"><i class="fa fa-facebook"></i> Facebook</a>
+
+</div>
+
+<div class="scroll_box cta_box">
+
+  <div class="progress"><span></span></div>
+
+  <div class="text">
+    <p>Your CTA here</p>
+    <p><strong>Describe your CTA.</strong></p>
+  </div>
+
+  <div class="cta"><a href="{{ site.donation_url }}" class="open_modal button" data-track-event="Modal|Open Donate|From Article Time Bomb">Donate now</a></div>
+
+</div>
+
+<div class="scroll_box donation_mini">
+  <a href="{{ site.donation_url }}" class="open_modal button" data-track-event="Modal|Open Donate|From Article Minified">Donate now</a>
+</div>
+
+
+<div class="modal mfp-hide" id="subscribe">
+
+  <h2>Subscribe</h2>
+
+  <p class="sub">Enter your email to receive updates in your inbox.</p>
+
+  <form method="POST" action="{{site.list_subscription_url}}">
+    <div class="form_item">
+      <input type="email" name="email" placeholder="Your email">
+      <input type="submit" value="Follow" class="button" />
+    </div>
+
+    <div class="disclaimer">
+      No spam, unsubscribe anytime · <a href="#" target="_blank">Privacy Policy</a>
+    </div>
+  </form>
+</div>
+
+<div class="modal mfp-hide" id="subscribe_success" data-share>
+
+  <h2>An email is on the way</h2>
+  <p class="sub">Thank you for your interest.</p>
+
+  <p>Share this with your friends:</p>
+
+  <a href="#" class="social_share twitter popup" data-share-network="twitter"><i class="fa fa-twitter"></i> Tweet</a>
+  <a href="#" class="social_share facebook popup" data-share-network="facebook"><i class="fa fa-facebook"></i> Facebook</a>
+  <a href="#" class="social_share email" data-share-network="email"><i class="fa fa-envelope"></i> Email</a>
+
+</div>
+
+<div class="modal mfp-hide" id="subscribe_error">
+  <h2>Sorry, something went wrong</h2>
+  <p class="sub">Please try again in a few minutes</p>
+</div>
+

@@ -1,0 +1,86 @@
+<header class="pure-g project stickable">
+
+  <div class="pure-u-1 ">
+    <!-- <div class="bg"></div> -->
+    <div class="cont clearfix ">
+
+      <a class="responsive menu_icon open_mobile_menu" href="#mobile_menu" data-track-event="Mobile|Open Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+
+      <a class="site-title" href="{{ site.baseurl }}/" title="{{ site.title }}">{% img 'logo' class:'logo' %}</a>
+
+      <span class="project_title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></span>
+
+      <menu>
+        <a href="">Option 1</a>
+        <a href="">Option 2</a>
+        <a href="">Option 3</a>
+        <a href="">Option 4</a>
+        <a href="">Option 5</a>
+      </menu>
+
+      <div class="header_tools tools" data-share>
+
+        <span class="social_links">
+          {% include social_links.html %}
+        </span>
+        
+        <a class="responsive menu_icon open_mobile_menu" href="#mobile_menu" data-track-event="Mobile|Open Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+<header class="mobile_menu modal mfp-hide" id="mobile_menu">
+
+  <header>
+    <a class="site-title" href="{{ site.baseurl }}/" title="{{ site.title }}">{% img 'logo' class:'logo' %}</a>
+  </header>
+
+  <menu>
+    <a href="">Option 1</a>
+    <a href="">Option 2</a>
+    <a href="">Option 3</a>
+    <a href="">Option 4</a>
+    <a href="">Option 5</a>
+  </menu>
+
+  <menu class="side">
+    <a class="button open_modal" href="#subscribe" data-track-event="Modal|Subscribe|From Mobile Menu">Sign up for updates</a>
+    <a href="#" target="_blank">Secondary link</a>
+    <a href="#" target="_blank">Secondary link</a>
+    <a href="#" target="_blank">Secondary link</a>
+    <a href="#" target="_blank">Secondary link</a>
+  </menu>
+
+</header>
+
+<menu class="on_logo_hover">
+
+  <header style="display: none">
+    <a class="site-title" href="{{ site.baseurl }}/" title="{{ site.title }}">{% img 'logo' class:'logo' %}</a>
+  </header>
+
+  <h3>{{ site.title }} Reading List</h3>
+
+  <menu>
+    <a href="">Option 1</a>
+    <a href="">Option 2</a>
+    <a href="">Option 3</a>
+    <a href="">Option 4</a>
+    <a href="">Option 5</a>
+  </menu>
+
+  {% include articles_latest.html %}
+
+</menu>
+
+<div class="responsive social_links_container start_hidden" data-share>
+  {% include social_links.html %}
+</div>

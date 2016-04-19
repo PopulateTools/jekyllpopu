@@ -1,0 +1,7 @@
+.DS_Store
+.sass-cache
+.asset-cache
+.ruby-version
+.s3cfg
+.jekyll-metadata
+_site/

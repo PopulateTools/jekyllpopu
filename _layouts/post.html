@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<progress value="0"></progress>
+
+<article itemscope itemtype="http://schema.org/Article" class="{% if page.main_photo_big %} big_photo {% endif %}">
+
+  {% if page.main_photo_big %}
+  <header>
+    {% if page.main_photo_big contains '://' %}
+      <img src="{{ page.main_photo_big }}" class="heading" itemprop="img heading" title="{% if page.main_photo_caption %}{{ page.main_photo_caption }}{% endif %}">
+    {% else %}
+      {% img '{{ page.main_photo_big }}' class:'heading' itemprop:'img heading' title:'{{ page.main_photo_caption }}' %}
+    {% endif %}
+    <div class="header_text">
+      <div class="bg"></div>
+      <div class="column">
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+        <p class="subtitle" itemprop="description">{{ page.subtitle }}</p>
+      </div>
+    </div>
+
+
+  </header>
+  {% endif %}
+
+  <div class="column">
+
+    {% if page.main_photo %}
+      {% img '{{ page.main_photo }}' class:'pure-img heading' itemprop:'img heading' title:'{{ page.main_photo_caption }}' %}
+      <header>
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+        <p class="subtitle" itemprop="description">{{ page.subtitle }}</p>
+      </header>
+    {% elsif page.main_photo == null and page.main_photo_big == null %}
+      <header>
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+        <p class="subtitle" itemprop="description">{{ page.subtitle }}</p>
+      </header>
+    {% endif %}
+
+    <div class="meta clearfix">
+
+      <div class="tool authored">
+        {% if page.author %}
+          By <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+        {% endif %}
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      </div>
+
+
+      <div class="tools">
+
+        {% if page.element_type != 'static_page' %}
+        <div class="tool reading_time">
+          <span><i class="fa fa-clock-o"></i> Reading time:</span>
+          {% assign words = content | number_of_words %}
+          {% if words < 360 %}
+            1 minute
+          {% else %}
+            {{ words | divided_by:270 }} minutes
+          {% endif %}
+        </div>
+        {% endif %}
+
+        
+      </div>
+
+    </div>
+
+  
+    <div class="content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+  </div><!-- .column -->
+
+</article>
