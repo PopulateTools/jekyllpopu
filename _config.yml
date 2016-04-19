@@ -33,12 +33,6 @@ twitter_hashtag_for_social_share: '#populate'
 markdown: kramdown
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'Rakefile', '_config.yml', 'config']
 
-# Read later
-read_later_url: https://later.populate.tools/jobs
-
-# Reading list data
-reading_list_file: reading_list.json
-
 gems: [jekyll-assets]
 
 jekyll-press:
@@ -61,4 +55,4 @@ assets:
   cachebust: hard
   gzip: [ text/css, application/javascript ]
 
-timezone: America/New_York
+timezone: UTC

@@ -10,8 +10,6 @@
 //= require vendor/select-and-tweet
 //= require vendor/klass
 //= require components/shareContent
-// require components/readLater
-// require components/readingList
 
 // some config
 var min_scroll_to_show_social_links = 650;

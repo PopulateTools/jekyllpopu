@@ -81,15 +81,3 @@ The internal markup for listing photos is the same.
 
 </div>
 ```
-
-
-### Adding an article to the Reading list
-
-The **reading list** is a list of articles to read in a predefined order. To add an article to the
-reading list you need to:
-
-1 - Add the tag `readinglist` to the list of tags of the article
-
-2 - Consider the position of the article in the list by the date in the prefix of the file name. For
-example, the article: `2016-01-29-foo.md` will be previous to `2016-02-01-bar.md`.
-
