@@ -5,7 +5,7 @@ gem "jekyll-assets"
 gem "mina"
 gem "mina-multistage"
 gem "html-proofer"
-gem "wdm", ">= 0.1.0" if Gem.win_platform?
+gem "wdm", ">= 0.1.0", :platforms => [:mswin, :mingw]
 gem "mina-slack", git: 'git@github.com:johnkoht/mina-slack.git'
 
 group :production do
